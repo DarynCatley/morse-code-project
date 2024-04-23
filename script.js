@@ -1,3 +1,5 @@
+const reset = document.getElementById("reset-btn");
+
 let morseCode = {
   A: ".-",
   B: "-...",
@@ -40,7 +42,7 @@ let morseCode = {
 let userInput = "";
 
 //create a user input function for the word box
-export function userWordInput(word) {
+function userWordInput(word) {
   let display = document.getElementById("word-input");
   display.innerHTML + -word;
 }
@@ -58,8 +60,22 @@ document.getElementById("translate-btn").addEventListener("click", () => {
     console.log(outputMorse);
     let result = document.getElementById("result-box");
     result.innerHTML += outputMorse + " ";
+  
   });
-});
+  reset.classList.remove("hide")
+  
+})
+
+    let wordInput = document.getElementById("word-input")
+    wordInput.addEventListener("click", function(){
+         wordInput = ""
+
+    })
+
+    
+
+    
+    
 
 // 2. store the word in a "global" variable
 
